@@ -1,0 +1,44 @@
+﻿<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121212"/>
+      <stop offset="1" stop-color="#161617"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 120) rotate(18) scale(300 240)">
+      <stop stop-color="#FF3131" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FF3131" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="r2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 180) rotate(18) scale(320 260)">
+      <stop stop-color="#50C878" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#50C878" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="54" y="54" width="1092" height="522" rx="28" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="54" y="54" width="1092" height="522" rx="28" fill="url(#r1)"/>
+  <rect x="54" y="54" width="1092" height="522" rx="28" fill="url(#r2)"/>
+  <g opacity="0.18">
+    <path d="M54 120H1146" stroke="white" stroke-opacity="0.22"/>
+    <path d="M54 186H1146" stroke="white" stroke-opacity="0.12"/>
+    <path d="M54 252H1146" stroke="white" stroke-opacity="0.12"/>
+    <path d="M54 318H1146" stroke="white" stroke-opacity="0.12"/>
+    <path d="M54 384H1146" stroke="white" stroke-opacity="0.12"/>
+    <path d="M54 450H1146" stroke="white" stroke-opacity="0.12"/>
+    <path d="M54 516H1146" stroke="white" stroke-opacity="0.12"/>
+  </g>
+  <g>
+    <path d="M164 166C164 128.444 194.444 98 232 98C269.556 98 300 128.444 300 166C300 210.782 251.556 265.389 238.078 279.677C234.935 283.005 229.065 283.005 225.922 279.677C212.444 265.389 164 210.782 164 166Z" fill="#0B1017" stroke="#FBBF24" stroke-width="3"/>
+    <circle cx="232" cy="167" r="35" fill="#121212" stroke="rgba(255,255,255,0.16)"/>
+    <path d="M198 171C205 151 212 183 219 165C226 147 233 151 240 167C247 183 254 187 266 161" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="232" cy="167" r="8" fill="#50C878"/>
+  </g>
+  <text x="344" y="210" fill="white" font-size="58" font-family="Arial, sans-serif" font-weight="700">Reso</text>
+  <text x="344" y="278" fill="rgba(255,255,255,0.84)" font-size="34" font-family="Arial, sans-serif" font-weight="600">Ses ile Mekan Keşfet</text>
+  <text x="344" y="340" fill="rgba(255,255,255,0.62)" font-size="24" font-family="Arial, sans-serif">Zen / Neutral / Hype modlarıyla şehrin ritmini haritada keşfet.</text>
+  <g>
+    <rect x="344" y="408" width="184" height="46" rx="23" fill="#FBBF24"/>
+    <text x="375" y="437" fill="#111" font-size="20" font-family="Arial, sans-serif" font-weight="700">Uygulamayı İndir</text>
+    <rect x="542" y="408" width="174" height="46" rx="23" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="584" y="437" fill="white" font-size="20" font-family="Arial, sans-serif" font-weight="600">Reso PRO</text>
+  </g>
+</svg>

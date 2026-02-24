@@ -1,0 +1,162 @@
+﻿@import "tailwindcss";
+
+:root {
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --surface-2: #242424;
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --text-dim: rgba(255, 255, 255, 0.45);
+  --border: rgba(255, 255, 255, 0.1);
+  --brand-zen: #50c878;
+  --brand-zen-soft: rgba(80, 200, 120, 0.16);
+  --brand-neutral: #6b7280;
+  --brand-hype: #ff3131;
+  --brand-hype-soft: rgba(255, 49, 49, 0.16);
+  --brand-gold: #fbbf24;
+  --brand-gold-2: #f59e0b;
+  --logo-navy: #00385f;
+  --glass: rgba(18, 18, 18, 0.72);
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --shadow-glass: 0 24px 80px rgba(0, 0, 0, 0.34);
+  --container-max: 80rem;
+  --grid-line: rgba(255, 255, 255, 0.055);
+  --focus-ring: rgba(251, 191, 36, 0.9);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: clip;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 49, 49, 0.09), transparent 36%),
+    radial-gradient(circle at 92% 14%, rgba(80, 200, 120, 0.08), transparent 38%),
+    radial-gradient(circle at 50% 120%, rgba(251, 191, 36, 0.06), transparent 42%),
+    linear-gradient(180deg, #111112 0%, #121212 38%, #111113 100%);
+  color: var(--text);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
+  opacity: 0.45;
+}
+
+body::after {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.02), transparent 32%),
+    radial-gradient(circle at 85% 35%, rgba(255, 255, 255, 0.018), transparent 36%);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.28);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--focus-ring),
+    0 0 0 5px rgba(18, 18, 18, 0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@utility container-shell {
+  width: min(100% - 1.5rem, var(--container-max));
+  margin-inline: auto;
+}
+
+@utility section-pad {
+  padding-block: clamp(3rem, 6vw, 5.25rem);
+}
+
+@utility glass-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility hairline {
+  border-color: var(--border);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility soft-muted {
+  color: var(--text-muted);
+}
+
+@utility text-dim {
+  color: var(--text-dim);
+}
+
+@utility hero-grid {
+  background-image:
+    radial-gradient(circle at 25% 20%, rgba(255, 49, 49, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(80, 200, 120, 0.07), transparent 48%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: auto, auto, 22px 22px, 22px 22px;
+}
+
+@media (max-width: 380px) {
+  :root {
+    --radius-xl: 1.05rem;
+    --radius-2xl: 1.25rem;
+  }
+
+  .container-shell {
+    width: min(100% - 1rem, var(--container-max));
+  }
+}
