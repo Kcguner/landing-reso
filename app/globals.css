@@ -1,6 +1,9 @@
 ﻿@import "tailwindcss";
 
 :root {
+  --font-sora: "Sora", "Manrope", system-ui, sans-serif;
+  --font-manrope: "Manrope", system-ui, sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
   --bg: #121212;
   --surface: #1e1e1e;
   --surface-2: #242424;

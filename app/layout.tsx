@@ -1,24 +1,5 @@
-﻿import type { Metadata } from "next";
-import { JetBrains_Mono, Manrope, Sora } from "next/font/google";
+import type { Metadata } from "next";
 import "./globals.css";
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["600", "700", "800"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  weight: ["500", "600"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://reso.app"),
@@ -64,9 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" suppressHydrationWarning>
-      <body className={`${sora.variable} ${manrope.variable} ${jetBrainsMono.variable} bg-background text-foreground antialiased`}>
-        {children}
-      </body>
+      <body className="bg-background text-foreground antialiased">{children}</body>
     </html>
   );
 }
