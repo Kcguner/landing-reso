@@ -33,20 +33,12 @@ export type VibeCardItem = {
   venueTypes: string[];
 };
 
-export type ShowcaseVariant = "map" | "list" | "auth" | "pro";
+export type ShowcaseVariant = "map" | "list" | "auth" | "contribute";
 
 export type ShowcaseItem = {
   title: string;
   subtitle?: string;
   variant: ShowcaseVariant;
-};
-
-export type PlanCardItem = {
-  name: "Aylık" | "Yıllık";
-  highlighted?: boolean;
-  badge?: string;
-  subtitle: string;
-  cta: string;
 };
 
 export type SectionShellProps = {

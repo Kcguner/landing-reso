@@ -29,32 +29,35 @@ export function Navbar({ items }: NavbarProps) {
         <nav
           aria-label="Ana navigasyon"
           className={cn(
-            "container-shell flex h-14 items-center justify-between rounded-2xl border border-transparent px-3 transition-all sm:h-[60px] sm:px-4",
+            "container-shell relative flex h-14 items-center justify-between overflow-hidden rounded-2xl border px-3 transition-all sm:h-[60px] sm:px-4",
             scrolled
-              ? "border-white/10 bg-[color:var(--glass)] shadow-[0_12px_40px_rgba(0,0,0,0.32)] backdrop-blur-xl"
-              : "bg-transparent",
+              ? "border-white/12 bg-[color:var(--glass)] shadow-[0_14px_46px_rgba(0,0,0,0.34)] backdrop-blur-xl"
+              : "border-white/6 bg-black/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-md",
           )}
         >
-          <a href="#hero" className="flex items-center gap-2.5 rounded-full px-1 py-1">
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,101,93,0.03),transparent_35%,rgba(77,226,177,0.025)_72%,transparent)]" />
+
+          <a href="#hero" className="relative flex items-center gap-2.5 rounded-full px-1 py-1">
             <ResoLogo className="h-8 w-8" />
             <span className="font-[var(--font-sora)] text-base font-semibold tracking-tight text-white">
               Reso
             </span>
+            <span className="hidden h-1.5 w-1.5 rounded-full bg-[var(--brand-zen)] shadow-[0_0_0_4px_rgba(77,226,177,0.12)] sm:inline-block" />
           </a>
 
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="relative hidden items-center gap-1 lg:flex">
             {items.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-3 py-2 text-sm font-medium text-white/78 transition hover:bg-white/6 hover:text-white"
+                className="rounded-xl px-3 py-2 text-sm font-medium text-white/76 transition hover:bg-white/7 hover:text-white"
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          <div className="hidden items-center gap-2 md:flex">
+          <div className="relative hidden items-center gap-2 md:flex">
             <Button href="#final-cta" size="sm">
               Uygulamayı İndir
             </Button>

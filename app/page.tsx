@@ -5,7 +5,6 @@ import { VibeModes } from "@/components/landing/vibe-modes";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { FeaturesGrid } from "@/components/landing/features-grid";
 import { Showcase } from "@/components/landing/showcase";
-import { ProSection } from "@/components/landing/pro-section";
 import { Personas } from "@/components/landing/personas";
 import { FAQ } from "@/components/landing/faq";
 import { FinalCTA } from "@/components/landing/final-cta";
@@ -25,7 +24,6 @@ export default function HomePage() {
         <HowItWorks />
         <FeaturesGrid items={features} />
         <Showcase />
-        <ProSection />
         <Personas />
         <FAQ items={faqs} />
         <FinalCTA />

@@ -4,29 +4,29 @@
   --font-sora: "Sora", "Manrope", system-ui, sans-serif;
   --font-manrope: "Manrope", system-ui, sans-serif;
   --font-jetbrains-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
-  --bg: #121212;
-  --surface: #1e1e1e;
-  --surface-2: #242424;
-  --text: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.7);
-  --text-dim: rgba(255, 255, 255, 0.45);
-  --border: rgba(255, 255, 255, 0.1);
-  --brand-zen: #50c878;
-  --brand-zen-soft: rgba(80, 200, 120, 0.16);
-  --brand-neutral: #6b7280;
-  --brand-hype: #ff3131;
-  --brand-hype-soft: rgba(255, 49, 49, 0.16);
-  --brand-gold: #fbbf24;
-  --brand-gold-2: #f59e0b;
+  --bg: #090d12;
+  --surface: #0f151d;
+  --surface-2: #141c26;
+  --text: #f6f3ec;
+  --text-muted: rgba(246, 243, 236, 0.73);
+  --text-dim: rgba(246, 243, 236, 0.46);
+  --border: rgba(255, 255, 255, 0.09);
+  --brand-zen: #4de2b1;
+  --brand-zen-soft: rgba(77, 226, 177, 0.14);
+  --brand-neutral: #8b96a9;
+  --brand-hype: #ff655d;
+  --brand-hype-soft: rgba(255, 101, 93, 0.14);
+  --brand-gold: #f7cc78;
+  --brand-gold-2: #ff9d57;
   --logo-navy: #00385f;
-  --glass: rgba(18, 18, 18, 0.72);
+  --glass: rgba(8, 12, 17, 0.74);
   --radius-lg: 1rem;
   --radius-xl: 1.25rem;
   --radius-2xl: 1.75rem;
-  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.28);
-  --shadow-glass: 0 24px 80px rgba(0, 0, 0, 0.34);
+  --shadow-soft: 0 22px 68px rgba(0, 0, 0, 0.3);
+  --shadow-glass: 0 26px 90px rgba(0, 0, 0, 0.38);
   --container-max: 80rem;
-  --grid-line: rgba(255, 255, 255, 0.055);
+  --grid-line: rgba(240, 248, 255, 0.04);
   --focus-ring: rgba(251, 191, 36, 0.9);
 }
 
@@ -49,10 +49,11 @@ body {
   min-height: 100vh;
   overflow-x: clip;
   background:
-    radial-gradient(circle at 10% 10%, rgba(255, 49, 49, 0.09), transparent 36%),
-    radial-gradient(circle at 92% 14%, rgba(80, 200, 120, 0.08), transparent 38%),
-    radial-gradient(circle at 50% 120%, rgba(251, 191, 36, 0.06), transparent 42%),
-    linear-gradient(180deg, #111112 0%, #121212 38%, #111113 100%);
+    radial-gradient(circle at 8% 8%, rgba(255, 101, 93, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 12%, rgba(77, 226, 177, 0.09), transparent 36%),
+    radial-gradient(circle at 50% 105%, rgba(247, 204, 120, 0.08), transparent 45%),
+    conic-gradient(from 200deg at 50% 40%, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0) 24%, rgba(255, 255, 255, 0.02) 48%, rgba(255, 255, 255, 0) 72%, rgba(255, 255, 255, 0.018)),
+    linear-gradient(180deg, #070a0f 0%, #090d12 40%, #080b10 100%);
   color: var(--text);
   font-family: var(--font-manrope), system-ui, sans-serif;
 }
@@ -70,15 +71,20 @@ body::before {
   background-image:
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 34px 34px;
-  mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
-  opacity: 0.45;
+  background-size: 36px 36px;
+  mask-image:
+    radial-gradient(circle at 50% 26%, black 12%, rgba(0, 0, 0, 0.75) 34%, transparent 82%),
+    linear-gradient(180deg, black, transparent 78%);
+  opacity: 0.55;
 }
 
 body::after {
   background:
-    radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.02), transparent 32%),
-    radial-gradient(circle at 85% 35%, rgba(255, 255, 255, 0.018), transparent 36%);
+    radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.018), transparent 34%),
+    radial-gradient(circle at 85% 35%, rgba(255, 255, 255, 0.016), transparent 38%),
+    radial-gradient(circle at 25% 70%, rgba(77, 226, 177, 0.02), transparent 36%),
+    radial-gradient(circle at 78% 72%, rgba(255, 101, 93, 0.02), transparent 42%);
+  opacity: 0.9;
 }
 
 a,
@@ -123,9 +129,13 @@ button {
 }
 
 @utility glass-panel {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018) 42%, rgba(255, 255, 255, 0.01)),
+    linear-gradient(140deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0));
   backdrop-filter: blur(18px);
-  box-shadow: var(--shadow-soft);
+  box-shadow:
+    var(--shadow-soft),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 @utility hairline {
@@ -146,11 +156,12 @@ button {
 
 @utility hero-grid {
   background-image:
-    radial-gradient(circle at 25% 20%, rgba(255, 49, 49, 0.08), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(80, 200, 120, 0.07), transparent 48%),
+    radial-gradient(circle at 18% 22%, rgba(255, 101, 93, 0.08), transparent 38%),
+    radial-gradient(circle at 78% 78%, rgba(77, 226, 177, 0.07), transparent 46%),
+    radial-gradient(circle at 50% 40%, rgba(247, 204, 120, 0.035), transparent 58%),
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: auto, auto, 22px 22px, 22px 22px;
+  background-size: auto, auto, auto, 22px 22px, 22px 22px;
 }
 
 @media (max-width: 380px) {

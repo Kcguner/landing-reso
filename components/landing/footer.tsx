@@ -5,17 +5,23 @@ export function Footer() {
   return (
     <footer className="pb-8 pt-6">
       <div className="container-shell">
-        <div className="rounded-[1.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.015))] p-5 sm:p-6">
+        <div className="relative overflow-hidden rounded-[1.45rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.015))] p-5 sm:p-6">
+          <div className="pointer-events-none absolute inset-0 hero-grid opacity-15" />
+          <div className="pointer-events-none absolute -right-10 top-3 h-32 w-32 rounded-full bg-[var(--brand-gold)]/6 blur-3xl" />
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr]">
-            <div>
+            <div className="relative">
               <div className="flex items-center gap-2.5">
                 <ResoLogo className="h-8 w-8" />
                 <span className="font-[var(--font-sora)] text-lg font-semibold tracking-tight text-white">Reso</span>
               </div>
               <p className="mt-3 max-w-sm text-sm leading-6 text-[var(--text-muted)]">Akustik vibe odaklı mekan keşif uygulaması.</p>
+              <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-white/8 bg-black/15 px-3 py-1.5 text-[11px] font-semibold tracking-[0.14em] text-white/60 uppercase">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-zen)]" />
+                Mobile-first landing
+              </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="relative grid gap-6 sm:grid-cols-3">
               {footerColumns.map((column) => (
                 <div key={column.title}>
                   <h3 className="font-[var(--font-sora)] text-sm font-semibold tracking-tight text-white">{column.title}</h3>

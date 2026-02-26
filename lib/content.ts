@@ -22,7 +22,6 @@ import type {
   FeatureItem,
   NavItem,
   PersonaItem,
-  PlanCardItem,
   ShowcaseItem,
   VibeCardItem,
 } from "@/lib/types";
@@ -30,7 +29,7 @@ import type {
 export const navItems: NavItem[] = [
   { label: "Özellikler", href: "#features" },
   { label: "Nasıl Çalışır?", href: "#how-it-works" },
-  { label: "Pro", href: "#pro" },
+  { label: "Arayüz", href: "#showcase" },
   { label: "SSS", href: "#faq" },
 ];
 
@@ -45,13 +44,12 @@ export const heroContent = {
     { icon: Images, text: "Mekana fotoğraf, puan ve katkı ekleme" },
   ],
   primaryCta: { label: "Hemen Keşfetmeye Başla", href: "#final-cta", icon: ArrowRight },
-  secondaryCta: { label: "Pro Özelliklerini Gör", href: "#pro" },
+  secondaryCta: { label: "Arayüzü İncele", href: "#showcase" },
   stores: [
     { label: "App Store", note: "Yakında / Placeholder" },
     { label: "Google Play", note: "Yakında / Placeholder" },
   ],
-  footnote:
-    "Ücretsiz başlayın • Pro ile daha geniş alan, daha fazla mekan, reklamsız deneyim",
+  footnote: "Topluluk destekli canlı vibe verisi • Mobil deneyim için tasarlandı",
 } as const;
 
 export const problemSolutionContent = {
@@ -137,27 +135,8 @@ export const showcaseItems: ShowcaseItem[] = [
   { title: "Harita + Vibe Seçici", variant: "map" },
   { title: "Mekan Listesi ve Filtreler", variant: "list" },
   { title: "Giriş / Kayıt Ekranı", variant: "auth" },
-  { title: "Reso PRO Ekranı", variant: "pro" },
+  { title: "Katkı ve Fotoğraf Ekleme", variant: "contribute" },
 ];
-
-export const proPlans: PlanCardItem[] = [
-  { name: "Aylık", subtitle: "Esnek kullanım", cta: "Aylık Planı İncele" },
-  {
-    name: "Yıllık",
-    subtitle: "Daha avantajlı uzun dönem kullanım",
-    cta: "Yıllık Planı İncele",
-    highlighted: true,
-    badge: "En Popüler",
-  },
-];
-
-export const proBenefits = [
-  "20 km’ye kadar keşif alanı",
-  "Mod başına daha fazla mekan görünümü",
-  "Reklamsız deneyim",
-  "Profil fotoğrafı / gelişmiş profil deneyimi",
-  "Daha yüksek günlük katkı limiti",
-] as const;
 
 export const personas: PersonaItem[] = [
   {
@@ -196,12 +175,12 @@ export const faqs: FAQItem[] = [
   {
     question: "Ücretsiz kullanabilir miyim?",
     answer:
-      "Evet. Reso ücretsiz olarak kullanılabilir. Pro üyelik, daha geniş keşif alanı ve ek avantajlar sunar.",
+      "Evet. Reso deneyimi uygulama içinde ücretsiz kullanılabilir. Landing page, uygulamanın temel keşif akışını ve özelliklerini tanıtır.",
   },
   {
-    question: "Reso PRO ne sağlar?",
+    question: "Topluluğa nasıl katkı yaparım?",
     answer:
-      "Daha geniş keşif alanı, daha fazla mekan görünümü, reklamsız deneyim ve bazı profil/katkı avantajları sağlar.",
+      "Gittiğiniz mekanı puanlayabilir, fotoğraf ekleyebilir ve vibe bilgisini güncelleyebilirsiniz. Bu katkılar keşif sonuçlarının doğruluğunu artırır.",
   },
   {
     question: "Uygulama hangi cihazlarda çalışır?",
@@ -216,7 +195,7 @@ export const footerColumns = [
     links: [
       { label: "Özellikler", href: "#features" },
       { label: "Nasıl Çalışır?", href: "#how-it-works" },
-      { label: "Pro", href: "#pro" },
+      { label: "Arayüz", href: "#showcase" },
     ],
   },
   {
